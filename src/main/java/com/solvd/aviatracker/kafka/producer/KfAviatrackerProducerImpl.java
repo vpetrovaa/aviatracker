@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class KfAviatrackerProducerImpl implements KfProducer<Message> {
+public final class KfAviatrackerProducerImpl implements KfProducer<Message> {
 
     private final KafkaTemplate<String, Message> kafkaTemplate;
     private final KfProperties kfProperties;
 
     @Override
-    public final void sendMessage(Message message) {
+    public void sendMessage(final Message message) {
         kafkaTemplate.send(kfProperties.getInputTopic(), message);
     }
 

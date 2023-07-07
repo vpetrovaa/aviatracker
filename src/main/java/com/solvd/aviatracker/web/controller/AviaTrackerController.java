@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/aviatracker")
 @RequiredArgsConstructor
-public class AviaTrackerController {
+public final class AviaTrackerController {
 
     private final AviatrackerService aviatrackerService;
 
     @PostMapping
-    public void sendMessage(@RequestBody Message message) {
+    public void sendMessage(@RequestBody final Message message) {
         aviatrackerService.send(message);
     }
 

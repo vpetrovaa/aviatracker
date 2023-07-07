@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-public class KfAviatrackerConsumerImpl implements KfConsumer<Message> {
+public final class KfAviatrackerConsumerImpl implements KfConsumer<Message> {
 
     @KafkaListener(topics = "${spring.kafka.streams.output-topic}",
             groupId = "${spring.kafka.streams.group-id}",
             containerFactory = "kafkaListenerContainerFactory")
-    public void receive(Message message) {
+    public void receive(final Message message) {
         log.info("Message transformed into -> {}", message);
     }
 

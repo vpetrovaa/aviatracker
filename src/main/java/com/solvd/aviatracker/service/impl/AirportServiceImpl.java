@@ -15,8 +15,10 @@ public class AirportServiceImpl implements AirportService {
 
     @Override
     @Transactional(readOnly = true)
-    public Airport findNearestByLongitudeAndLatitude(Double latitude, Double longitude) {
-        return airportRepository.findNearestByLongitudeAndLatitude(latitude, longitude);
+    public Airport findNearestByLongitudeAndLatitude(final Double latitude,
+                                                     final Double longitude) {
+        return airportRepository.findNearestByLongitudeAndLatitude(
+                latitude, longitude);
     }
 
 }

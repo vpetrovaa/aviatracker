@@ -4,6 +4,7 @@ import com.solvd.aviatracker.domain.Airport;
 
 public interface AirportService {
 
-    Airport findNearestByLongitudeAndLatitude(Double latitude, Double longitude);
+    Airport findNearestByLongitudeAndLatitude(Double latitude,
+                                              Double longitude);
 
 }

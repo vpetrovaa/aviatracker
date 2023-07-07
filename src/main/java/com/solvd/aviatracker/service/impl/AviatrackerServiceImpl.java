@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AviatrackerServiceImpl implements AviatrackerService {
+public final class AviatrackerServiceImpl implements AviatrackerService {
 
     private final KfProducer kfProducer;
 
     @Override
-    public void send(Message message) {
+    public void send(final Message message) {
         kfProducer.sendMessage(message);
     }
 

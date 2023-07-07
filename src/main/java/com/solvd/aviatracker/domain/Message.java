@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Message {
+public final class Message {
 
     private String id;
     private String airplaneId;
@@ -25,7 +25,7 @@ public class Message {
 
     }
 
-    public Message process(Message input){
+    public Message process(final Message input) {
         return Message.builder()
                 .id(input.id)
                 .airplaneId(input.airplaneId)
