@@ -30,7 +30,6 @@ public class AviaProcessor {
     private final KfProperties kfProperties;
     private final AirportRepository airportRepository;
 
-    //TODO add filter by status
     @Bean
     public KStream<String, Message> stream(StreamsBuilder builder) {
         Serde<String> stringSerde = Serdes.String();
