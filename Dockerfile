@@ -7,5 +7,5 @@ RUN mvn clean install
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 EXPOSE 8072
-COPY --from=builder /app/target/*.jar aviatracker.jar
-ENTRYPOINT ["java", "-jar", "aviatracker.jar" ]
+COPY --from=builder /app/target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar" ]
