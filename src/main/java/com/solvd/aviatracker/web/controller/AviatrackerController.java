@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/aviatracker")
 @RequiredArgsConstructor
-public final class AviaTrackerController {
+public final class AviatrackerController {
 
     private final AviatrackerService aviatrackerService;
 
